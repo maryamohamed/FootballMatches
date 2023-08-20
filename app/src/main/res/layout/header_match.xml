@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginVertical="8dp"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="16dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/light_gray_color">
+
+
+        <TextView
+            android:id="@+id/referee_name"
+            style="@style/matchHeaderLargeTextViews"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:gravity="center"
+            app:layout_constraintEnd_toStartOf="@+id/away_team_name"
+            app:layout_constraintHorizontal_bias="0.515"
+            app:layout_constraintStart_toEndOf="@+id/home_team_name"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="K-Friend" />
+
+        <TextView
+            android:id="@+id/away_team_name"
+            style="@style/matchHeaderLargeTextViews"
+            android:layout_width="@dimen/text_width"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin32"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Wolvs" />
+
+        <TextView
+            android:id="@+id/home_team_name"
+            style="@style/matchHeaderLargeTextViews"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin32"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="liverpool" />
+
+
+        <TextView
+            android:id="@+id/away_full_time_goals"
+            style="@style/matchHeaderLargeTextViews"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/home_team_name"
+            app:layout_constraintStart_toStartOf="@+id/referee_name"
+            app:layout_constraintTop_toBottomOf="@+id/referee_name"
+            tools:text="2" />
+
+        <TextView
+            android:id="@+id/separator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:gravity="center"
+            android:text="@string/colon"
+            android:textColor="@color/primary_color"
+            app:layout_constraintBottom_toBottomOf="@+id/home_full_time_goals"
+            app:layout_constraintEnd_toStartOf="@+id/home_full_time_goals"
+            app:layout_constraintHorizontal_bias="0.593"
+            app:layout_constraintStart_toStartOf="@+id/away_full_time_goals"
+            app:layout_constraintTop_toBottomOf="@+id/referee_name"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/home_full_time_goals"
+            style="@style/matchHeaderLargeTextViews"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/away_team_name"
+            app:layout_constraintEnd_toEndOf="@+id/referee_name"
+            app:layout_constraintTop_toBottomOf="@+id/referee_name"
+            tools:text="4" />
+
+        <ImageView
+            android:id="@+id/delete_icon"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginTop="@dimen/margin4"
+            android:layout_marginEnd="@dimen/margin8"
+            android:layout_marginBottom="@dimen/margin8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_delete" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

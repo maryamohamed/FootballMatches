@@ -10,7 +10,7 @@ import com.maryam.footballmatches.data.domain.Match
 import com.maryam.footballmatches.databinding.HeaderMatchBinding
 import com.maryam.footballmatches.databinding.ItemMatchBinding
 
-class MatchAdapter(private var list : List<Match>, val listener : MatchInteractionListener) :
+class MatchAdapter(private var list : List<Match>, private val listener : MatchInteractionListener) :
     RecyclerView.Adapter<MatchAdapter.BaseViewHolder>() {
 
     override fun onCreateViewHolder(parent : ViewGroup, viewType : Int) : BaseViewHolder {
@@ -53,6 +53,10 @@ class MatchAdapter(private var list : List<Match>, val listener : MatchInteracti
                     awayFullTimeGoals.text = currentMatchItem.awayTeamFullTimeGoals
                     refereeName.text = currentMatchItem.referee
                     matchDate.text = currentMatchItem.date
+//                    root.setOnClickListener {
+//                        listener.replaceFragment()
+//
+//                    }
                 }
             }
 

@@ -13,8 +13,8 @@ import java.io.InputStreamReader
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding : ActivityMainBinding
-    private val myFragments = listOf<Fragment>(HomeFragment(), FilterFragment())
-    private val tabTitles = listOf("Home", "Filter")
+    private val myFragments = listOf<Fragment>(HomeFragment(),MatchDetailsFragment(), FilterFragment())
+    private val tabTitles = listOf("Home","Details","Filter")
     override fun onCreate(savedInstanceState : Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)

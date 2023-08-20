@@ -6,10 +6,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
+import com.maryam.footballmatches.R
 import com.maryam.footballmatches.data.DataManager
 import com.maryam.footballmatches.databinding.FragmentFilterBinding
 
-class FilterFragment : BaseFragment<FragmentFilterBinding>() {
+class FilterFragment : BaseFragment<FragmentFilterBinding>(){
     override fun bindFragments(
         inflater : LayoutInflater,
         container : ViewGroup?,

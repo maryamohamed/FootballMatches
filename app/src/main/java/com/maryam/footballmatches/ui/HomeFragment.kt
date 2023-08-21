@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.maryam.footballmatches.R
 import com.maryam.footballmatches.data.DataManager
 import com.maryam.footballmatches.databinding.FragmentHomeBinding
 

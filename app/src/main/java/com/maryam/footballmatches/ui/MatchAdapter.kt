@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.maryam.footballmatches.R
+import com.maryam.footballmatches.data.DataManager
 import com.maryam.footballmatches.data.domain.Match
 import com.maryam.footballmatches.databinding.HeaderMatchBinding
 import com.maryam.footballmatches.databinding.ItemMatchBinding
@@ -68,7 +69,6 @@ class MatchAdapter(private var list : List<Match>, private val listener : MatchI
                     awayFullTimeGoals.text = currentMatchHeader.awayTeamFullTimeGoals
                     refereeName.text = currentMatchHeader.referee
                     deleteIcon.setOnClickListener { listener.deleteItem(position) }
-
                 }
             }
         }

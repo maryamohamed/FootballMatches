@@ -10,7 +10,8 @@ import com.maryam.footballmatches.R
 import com.maryam.footballmatches.data.DataManager
 import com.maryam.footballmatches.databinding.FragmentFilterBinding
 
-class FilterFragment : BaseFragment<FragmentFilterBinding>(){
+class FilterFragment : BaseFragment<FragmentFilterBinding>() {
+    private lateinit var adapter : OuterAdapter
     override fun bindFragments(
         inflater : LayoutInflater,
         container : ViewGroup?,
@@ -22,6 +23,10 @@ class FilterFragment : BaseFragment<FragmentFilterBinding>(){
     override fun onViewCreated(view : View, savedInstanceState : Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initSpinner()
+        adapter = OuterAdapter(DataManager.matches)
+        binding?.outerRecyclerView?.adapter = adapter
+        super.onViewCreated(view, savedInstanceState)
+
     }
 
     private fun initSpinner() {

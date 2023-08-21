@@ -4,4 +4,9 @@
     <string name="home">Home</string>
     <string name="colon">:</string>
     <string name="match_details">Match Details</string>
+    <string name="half_time_goals">Half-Time Goals</string>
+    <string name="corners">Corners</string>
+    <string name="red_cards">Red Cards</string>
+    <string name="yellow_cards">Yellow Cards</string>
+    <string name="fouls">Fouls</string>
 </resources>

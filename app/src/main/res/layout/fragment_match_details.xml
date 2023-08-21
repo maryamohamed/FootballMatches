@@ -52,7 +52,7 @@
                 android:background="@color/white">
 
                 <TextView
-                    android:id="@+id/referee_name"
+                    android:id="@+id/details_referee_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="50dp"
@@ -68,20 +68,20 @@
                     tools:text="K-Friend" />
 
                 <TextView
-                    android:id="@+id/match_date"
+                    android:id="@+id/details_match_date"
                     style="@style/matchSmallTextViews"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:textColor="@color/dark_gray_color"
-                    app:layout_constraintEnd_toEndOf="@+id/referee_name"
+                    app:layout_constraintEnd_toEndOf="@+id/details_referee_name"
                     app:layout_constraintHorizontal_bias="0.424"
-                    app:layout_constraintStart_toStartOf="@+id/referee_name"
-                    app:layout_constraintTop_toBottomOf="@+id/referee_name"
+                    app:layout_constraintStart_toStartOf="@+id/details_referee_name"
+                    app:layout_constraintTop_toBottomOf="@+id/details_referee_name"
                     tools:text="15/07/2014" />
 
                 <ImageView
-                    android:id="@+id/away_team_logo"
+                    android:id="@+id/details_away_team_logo"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_marginStart="24dp"
@@ -92,28 +92,28 @@
                     app:srcCompat="@drawable/southampton" />
 
                 <TextView
-                    android:id="@+id/away_team_name"
+                    android:id="@+id/details_away_team_name"
                     android:textColor="@color/primary_color"
                     android:layout_width="@dimen/text_width"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    app:layout_constraintEnd_toEndOf="@+id/away_team_logo"
-                    app:layout_constraintStart_toStartOf="@+id/away_team_logo"
-                    app:layout_constraintTop_toBottomOf="@+id/away_team_logo"
+                    app:layout_constraintEnd_toEndOf="@+id/details_away_team_logo"
+                    app:layout_constraintStart_toStartOf="@+id/details_away_team_logo"
+                    app:layout_constraintTop_toBottomOf="@+id/details_away_team_logo"
                     tools:text="Wolvs" />
 
                 <TextView
-                    android:id="@+id/away_text"
+                    android:id="@+id/details_away_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/away"
                     android:textColor="@color/dark_gray_color"
-                    app:layout_constraintEnd_toEndOf="@+id/away_team_name"
-                    app:layout_constraintStart_toStartOf="@+id/away_team_name"
-                    app:layout_constraintTop_toBottomOf="@+id/away_team_name" />
+                    app:layout_constraintEnd_toEndOf="@+id/details_away_team_name"
+                    app:layout_constraintStart_toStartOf="@+id/details_away_team_name"
+                    app:layout_constraintTop_toBottomOf="@+id/details_away_team_name" />
 
                 <ImageView
-                    android:id="@+id/home_team_logo"
+                    android:id="@+id/details_home_team_logo"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_marginTop="40dp"
@@ -123,54 +123,54 @@
                     app:srcCompat="@drawable/liverpool" />
 
                 <TextView
-                    android:id="@+id/home_team_name"
+                    android:id="@+id/details_home_team_name"
                     android:textColor="@color/primary_color"
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    app:layout_constraintEnd_toEndOf="@+id/home_team_logo"
-                    app:layout_constraintStart_toStartOf="@+id/home_team_logo"
-                    app:layout_constraintTop_toBottomOf="@+id/home_team_logo"
+                    app:layout_constraintEnd_toEndOf="@+id/details_home_team_logo"
+                    app:layout_constraintStart_toStartOf="@+id/details_home_team_logo"
+                    app:layout_constraintTop_toBottomOf="@+id/details_home_team_logo"
                     tools:text="liverpool" />
 
                 <TextView
-                    android:id="@+id/home_text"
+                    android:id="@+id/details_home_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/home"
                     android:textColor="@color/dark_gray_color"
-                    app:layout_constraintEnd_toEndOf="@+id/home_team_name"
-                    app:layout_constraintStart_toStartOf="@+id/home_team_name"
-                    app:layout_constraintTop_toBottomOf="@+id/home_team_name" />
+                    app:layout_constraintEnd_toEndOf="@+id/details_home_team_name"
+                    app:layout_constraintStart_toStartOf="@+id/details_home_team_name"
+                    app:layout_constraintTop_toBottomOf="@+id/details_home_team_name" />
 
                 <TextView
-                    android:id="@+id/away_full_time_goals"
+                    android:id="@+id/details_away_full_time_goals"
                     style="@style/dialogText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:layout_constraintBottom_toBottomOf="@+id/separator"
-                    app:layout_constraintStart_toStartOf="@+id/match_date"
+                    app:layout_constraintBottom_toBottomOf="@+id/details_separator"
+                    app:layout_constraintStart_toStartOf="@+id/details_match_date"
                     tools:text="2" />
 
                 <TextView
-                    android:id="@+id/separator"
+                    android:id="@+id/details_separator"
                     style="@style/dialogText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
                     android:text="@string/colon"
-                    app:layout_constraintEnd_toStartOf="@+id/home_full_time_goals"
-                    app:layout_constraintStart_toEndOf="@+id/away_full_time_goals"
-                    app:layout_constraintTop_toBottomOf="@+id/match_date" />
+                    app:layout_constraintEnd_toStartOf="@+id/details_home_full_time_goals"
+                    app:layout_constraintStart_toEndOf="@+id/details_away_full_time_goals"
+                    app:layout_constraintTop_toBottomOf="@+id/details_match_date" />
 
 
                 <TextView
-                    android:id="@+id/home_full_time_goals"
+                    android:id="@+id/details_home_full_time_goals"
                     style="@style/dialogText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:layout_constraintBottom_toBottomOf="@+id/separator"
-                    app:layout_constraintEnd_toEndOf="@+id/match_date"
+                    app:layout_constraintBottom_toBottomOf="@+id/details_separator"
+                    app:layout_constraintEnd_toEndOf="@+id/details_match_date"
                     tools:text="4" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -223,17 +223,17 @@
                         android:layout_marginTop="@dimen/margin16">
 
                         <TextView
-                            android:id="@+id/home_team_half_time_goals"
+                            android:id="@+id/details_home_team_half_time_goals"
                             style="@style/startSecondaryLinearlayouts"
                             android:text="5" />
 
                         <TextView
-                            android:id="@+id/half_time_goals"
+                            android:id="@+id/details_half_time_goals"
                             style="@style/centerSecondaryLinearlayouts"
                             android:text="Half-Time Goals" />
 
                         <TextView
-                            android:id="@+id/away_team_half_time_goals"
+                            android:id="@+id/details_away_team_half_time_goals"
                             style="@style/endSecondaryLinearlayouts"
                             android:text="6" />
 
@@ -245,17 +245,17 @@
                         style="@style/secondaryLinearlayouts">
 
                         <TextView
-                            android:id="@+id/home_team_shots"
+                            android:id="@+id/details_home_team_shots"
                             style="@style/startSecondaryLinearlayouts"
                             tools:text="2" />
 
                         <TextView
-                            android:id="@+id/shots"
+                            android:id="@+id/details_shots"
                             style="@style/centerSecondaryLinearlayouts"
                             android:text="Shots" />
 
                         <TextView
-                            android:id="@+id/away_team_shots"
+                            android:id="@+id/details_away_team_shots"
                             style="@style/endSecondaryLinearlayouts"
                             android:text="3" />
 
@@ -266,17 +266,17 @@
                         style="@style/secondaryLinearlayouts">
 
                         <TextView
-                            android:id="@+id/home_team_shots_on_target"
+                            android:id="@+id/details_home_team_shots_on_target"
                             style="@style/startSecondaryLinearlayouts"
                             android:text="3" />
 
                         <TextView
-                            android:id="@+id/shots_on_target"
+                            android:id="@+id/details_shots_on_target"
                             style="@style/centerSecondaryLinearlayouts"
                             android:text="Shots on Target" />
 
                         <TextView
-                            android:id="@+id/away_team_shots_on_target"
+                            android:id="@+id/details_away_team_shots_on_target"
                             style="@style/endSecondaryLinearlayouts"
                             android:text="4" />
 
@@ -287,17 +287,17 @@
                         style="@style/secondaryLinearlayouts">
 
                         <TextView
-                            android:id="@+id/home_team_fouls"
+                            android:id="@+id/details_home_team_fouls"
                             style="@style/startSecondaryLinearlayouts"
                             android:text="2" />
 
                         <TextView
-                            android:id="@+id/fouls"
+                            android:id="@+id/details_fouls"
                             style="@style/centerSecondaryLinearlayouts"
                             android:text="Fouls" />
 
                         <TextView
-                            android:id="@+id/away_team_fouls"
+                            android:id="@+id/details_away_team_fouls"
                             style="@style/endSecondaryLinearlayouts"
                             android:text="6" />
 
@@ -308,17 +308,17 @@
                         style="@style/secondaryLinearlayouts">
 
                         <TextView
-                            android:id="@+id/home_team_corners"
+                            android:id="@+id/details_home_team_corners"
                             style="@style/startSecondaryLinearlayouts"
                             android:text="0" />
 
                         <TextView
-                            android:id="@+id/corners"
+                            android:id="@+id/details_corners"
                             style="@style/centerSecondaryLinearlayouts"
                             android:text="Corners" />
 
                         <TextView
-                            android:id="@+id/away_team_corners"
+                            android:id="@+id/details_away_team_corners"
                             style="@style/endSecondaryLinearlayouts"
                             android:text="6" />
 

@@ -1,0 +1,41 @@
+<!-- item_outer.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:paddingVertical="@dimen/padding8">
+        <TextView
+            android:id="@+id/item_away_team_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="liverPool"
+            android:layout_gravity="start"
+            android:gravity="center"
+            android:layout_marginStart="@dimen/margin16"
+            android:layout_weight="1"/>
+        <TextView
+            android:id="@+id/item_home_team_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Man City"
+            android:layout_gravity="end"
+            android:gravity="center"
+            android:layout_marginEnd="@dimen/margin16"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/innerRecyclerView"
+        android:padding="@dimen/padding16"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

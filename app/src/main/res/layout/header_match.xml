@@ -16,22 +16,22 @@
 
 
         <TextView
-            android:id="@+id/referee_name"
+            android:id="@+id/details_referee_name"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:gravity="center"
             android:textColor="@color/primary_color"
             android:textSize="@dimen/textSize18"
-            app:layout_constraintEnd_toStartOf="@+id/home_team_name"
-            app:layout_constraintStart_toEndOf="@+id/away_team_name"
+            app:layout_constraintEnd_toStartOf="@+id/details_home_team_name"
+            app:layout_constraintStart_toEndOf="@+id/details_away_team_name"
             app:layout_constraintTop_toTopOf="parent"
             tools:text="K-Friend"
             app:drawableStartCompat="@drawable/ic_referee" />
 
 
         <TextView
-            android:id="@+id/home_team_name"
+            android:id="@+id/details_home_team_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
@@ -45,7 +45,7 @@
             tools:text="Wolvs" />
 
         <TextView
-            android:id="@+id/away_team_name"
+            android:id="@+id/details_away_team_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -59,7 +59,7 @@
             tools:text="liverpool" />
 
         <TextView
-            android:id="@+id/away_full_time_goals"
+            android:id="@+id/details_away_full_time_goals"
             style="@style/matchHeaderLargeTextViews"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -67,22 +67,22 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/imageView"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/away_team_name"
+            app:layout_constraintStart_toEndOf="@+id/details_away_team_name"
             app:layout_constraintTop_toTopOf="@+id/imageView"
             app:layout_constraintVertical_bias="0.0"
             tools:text="2" />
 
         <TextView
-            android:id="@+id/home_full_time_goals"
+            android:id="@+id/details_home_full_time_goals"
             style="@style/matchHeaderLargeTextViews"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/home_team_name"
+            app:layout_constraintEnd_toStartOf="@+id/details_home_team_name"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/imageView"
-            app:layout_constraintTop_toTopOf="@+id/home_team_name"
+            app:layout_constraintTop_toTopOf="@+id/details_home_team_name"
             app:layout_constraintVertical_bias="0.0"
             tools:text="4" />
 
@@ -105,10 +105,10 @@
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="20dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/home_full_time_goals"
+            app:layout_constraintEnd_toStartOf="@+id/details_home_full_time_goals"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/away_full_time_goals"
-            app:layout_constraintTop_toTopOf="@+id/home_full_time_goals"
+            app:layout_constraintStart_toEndOf="@+id/details_away_full_time_goals"
+            app:layout_constraintTop_toTopOf="@+id/details_home_full_time_goals"
             app:layout_constraintVertical_bias="0.0"
             app:srcCompat="@drawable/ic_separator" />
     </androidx.constraintlayout.widget.ConstraintLayout>

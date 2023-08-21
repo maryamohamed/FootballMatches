@@ -11,7 +11,10 @@ import com.maryam.footballmatches.data.domain.Match
 import com.maryam.footballmatches.databinding.HeaderMatchBinding
 import com.maryam.footballmatches.databinding.ItemMatchBinding
 
-class MatchAdapter(private var list : List<Match>, private val listener : MatchInteractionListener) :
+class MatchAdapter(
+    private var list : List<Match>,
+    private val listener : MatchInteractionListener
+) :
     RecyclerView.Adapter<MatchAdapter.BaseViewHolder>() {
 
     override fun onCreateViewHolder(parent : ViewGroup, viewType : Int) : BaseViewHolder {
@@ -48,12 +51,12 @@ class MatchAdapter(private var list : List<Match>, private val listener : MatchI
         when (holder) {
             is MatchViewHolder -> {
                 holder.binding.apply {
-                    homeTeamName.text = currentMatchItem.homeTeamName
-                    awayTeamName.text = currentMatchItem.awayTeamName
-                    homeFullTimeGoals.text = currentMatchItem.homeTeamFullTimeGoals
-                    awayFullTimeGoals.text = currentMatchItem.awayTeamFullTimeGoals
-                    refereeName.text = currentMatchItem.referee
-                    matchDate.text = currentMatchItem.date
+                    detailsHomeTeamName.text = currentMatchItem.homeTeamName
+                    detailsAwayTeamName.text = currentMatchItem.awayTeamName
+                    detailsHomeFullTimeGoals.text = currentMatchItem.homeTeamFullTimeGoals
+                    detailsAwayFullTimeGoals.text = currentMatchItem.awayTeamFullTimeGoals
+                    detailsRefereeName.text = currentMatchItem.referee
+                    detailsMatchDate.text = currentMatchItem.date
 //                    root.setOnClickListener {
 //                        listener.replaceFragment()
 //
@@ -63,11 +66,11 @@ class MatchAdapter(private var list : List<Match>, private val listener : MatchI
 
             is MatchHeaderViewHolder -> {
                 holder.binding.apply {
-                    homeTeamName.text = currentMatchHeader.homeTeamName
-                    awayTeamName.text = currentMatchHeader.awayTeamName
-                    homeFullTimeGoals.text = currentMatchHeader.homeTeamFullTimeGoals
-                    awayFullTimeGoals.text = currentMatchHeader.awayTeamFullTimeGoals
-                    refereeName.text = currentMatchHeader.referee
+                    detailsHomeTeamName.text = currentMatchHeader.homeTeamName
+                    detailsAwayTeamName.text = currentMatchHeader.awayTeamName
+                    detailsHomeFullTimeGoals.text = currentMatchHeader.homeTeamFullTimeGoals
+                    detailsAwayFullTimeGoals.text = currentMatchHeader.awayTeamFullTimeGoals
+                    detailsRefereeName.text = currentMatchHeader.referee
                     deleteIcon.setOnClickListener { listener.deleteItem(position) }
                 }
             }

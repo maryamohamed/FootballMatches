@@ -20,9 +20,9 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(), MatchInteractionListen
     }
 
     override fun onViewCreated(view : View, savedInstanceState : Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
         adapter = MatchAdapter(DataManager.matches, this)
         binding?.recyclerMatch?.adapter = adapter
-        super.onViewCreated(view, savedInstanceState)
     }
 
     override fun bindFragments(

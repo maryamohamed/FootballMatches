@@ -23,14 +23,14 @@
             android:gravity="center"
             android:textColor="@color/primary_color"
             android:textSize="@dimen/textSize18"
-            app:layout_constraintEnd_toStartOf="@+id/item_home_team_fouls"
+            app:layout_constraintEnd_toStartOf="@+id/item_home_team_corners"
             app:layout_constraintHorizontal_bias="0.529"
-            app:layout_constraintStart_toEndOf="@+id/item_away_team_fouls"
+            app:layout_constraintStart_toEndOf="@+id/item_away_team_corners"
             app:layout_constraintTop_toTopOf="parent"
             android:text="@string/corners" />
 
         <TextView
-            android:id="@+id/item_home_team_fouls"
+            android:id="@+id/item_home_team_corners"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
@@ -57,7 +57,7 @@
             app:layout_constraintEnd_toEndOf="parent" />
 
         <TextView
-            android:id="@+id/item_away_team_fouls"
+            android:id="@+id/item_away_team_corners"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="40dp"

@@ -12,7 +12,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/light_gray_color">
+        android:background="@drawable/background">
 
 
         <TextView
@@ -21,13 +21,14 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin16"
             android:gravity="center"
-            android:textColor="@color/primary_color"
-            android:textSize="@dimen/textSize18"
+            android:text="@string/yellow_cards"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textSize16"
             app:layout_constraintEnd_toStartOf="@+id/item_home_team_yellow_cards"
             app:layout_constraintHorizontal_bias="0.529"
             app:layout_constraintStart_toEndOf="@+id/item_away_team_yellow_cards"
-            app:layout_constraintTop_toTopOf="parent"
-            android:text="@string/yellow_cards" />
+            app:layout_constraintTop_toTopOf="parent" />
+
 
         <TextView
             android:id="@+id/item_home_team_yellow_cards"
@@ -36,25 +37,27 @@
             android:layout_marginTop="40dp"
             android:layout_marginEnd="40dp"
             android:gravity="center"
-            android:textColor="@color/primary_color"
+            android:textColor="@color/white"
+            android:textSize="16sp"
             app:layout_constraintBottom_toTopOf="@+id/details_home_text"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.317"
+            app:layout_constraintVertical_bias="0.444"
             tools:text="8" />
-
 
         <TextView
             android:id="@+id/details_home_text"
-            android:layout_width="wrap_content"
+            android:layout_width="50dp"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="24dp"
-            android:layout_marginBottom="@dimen/margin8"
+            android:layout_marginBottom="20dp"
             android:gravity="center"
             android:text="@string/home"
-            android:textColor="@color/primary_color"
+            android:textColor="@color/dark_gray_color"
+            android:textSize="@dimen/textSize8"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+            app:layout_constraintEnd_toEndOf="@+id/item_home_team_yellow_cards"
+            app:layout_constraintHorizontal_bias="0.523"
+            app:layout_constraintStart_toStartOf="@+id/item_home_team_yellow_cards" />
 
         <TextView
             android:id="@+id/item_away_team_yellow_cards"
@@ -63,23 +66,37 @@
             android:layout_marginStart="40dp"
             android:layout_marginTop="40dp"
             android:gravity="center"
-            android:textColor="@color/primary_color"
+            android:textColor="@color/white"
+            android:textSize="16sp"
             app:layout_constraintBottom_toTopOf="@+id/details_away_text"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.6"
             tools:text="5" />
 
         <TextView
             android:id="@+id/details_away_text"
-            android:layout_width="wrap_content"
+            android:layout_width="50dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="28dp"
-            android:layout_marginBottom="@dimen/margin8"
+            android:layout_marginBottom="20dp"
             android:gravity="center"
             android:text="@string/away"
-            android:textColor="@color/primary_color"
+            android:textColor="@color/dark_gray_color"
+            android:textSize="@dimen/textSize8"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintEnd_toEndOf="@+id/item_away_team_yellow_cards"
+            app:layout_constraintHorizontal_bias="0.523"
+            app:layout_constraintStart_toStartOf="@+id/item_away_team_yellow_cards" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginBottom="33dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/item_home_team_yellow_cards"
+            app:layout_constraintStart_toEndOf="@+id/item_away_team_yellow_cards"
+            app:srcCompat="@drawable/yellow" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </com.google.android.material.card.MaterialCardView>

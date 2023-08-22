@@ -8,9 +8,13 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
         android:orientation="horizontal"
-        android:weightSum="2"
-        android:paddingVertical="@dimen/padding8">
+        android:weightSum="3"
+        android:paddingVertical="@dimen/padding8"
+        android:background="@drawable/outer_linear"
+        android:layout_marginVertical="@dimen/padding8">
         <TextView
             android:id="@+id/item_away_team_name"
             android:layout_width="wrap_content"
@@ -18,7 +22,14 @@
             tools:text="liverPool"
             android:layout_gravity="start"
             android:gravity="center"
+            android:textColor="@color/dark_gray_color"
             android:layout_marginStart="@dimen/margin16"
+            android:layout_weight="1"/>
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:src="@drawable/team"
             android:layout_weight="1"/>
         <TextView
             android:id="@+id/item_home_team_name"
@@ -27,15 +38,15 @@
             tools:text="Man City"
             android:layout_gravity="end"
             android:gravity="center"
+            android:textColor="@color/dark_gray_color"
             android:layout_marginEnd="@dimen/margin16"
             android:layout_weight="1"/>
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/innerRecyclerView"
-        android:padding="@dimen/padding16"
-        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:orientation="horizontal" />
 
 </LinearLayout>

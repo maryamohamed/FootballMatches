@@ -15,6 +15,7 @@ import com.maryam.footballmatches.databinding.ItemMatchYellowCardsBinding
 
 class InnerAdapter(private var list : List<Match>) :
     RecyclerView.Adapter<InnerAdapter.BaseViewHolder>() {
+    private val innerItems : List<Match> = list.take(6)
 
     override fun onCreateViewHolder(parent : ViewGroup, viewType : Int) : BaseViewHolder {
         when (viewType) {
@@ -77,42 +78,47 @@ class InnerAdapter(private var list : List<Match>) :
         return super.createViewHolder(parent, viewType)
     }
 
-    override fun getItemCount() = list.size
+    override fun getItemCount() = innerItems.size
 
     override fun onBindViewHolder(holder : BaseViewHolder, position : Int) {
         val currentItem = list[position + 1]
         when (holder) {
-            is CornersViewHolder-> {
+            is CornersViewHolder -> {
                 holder.binding.apply {
                     itemAwayTeamCorners.text = currentItem.awayTeamCorners
                     itemHomeTeamCorners.text = currentItem.homeTeamCorners
                 }
             }
-            is FoulsViewHolder-> {
+
+            is FoulsViewHolder -> {
                 holder.binding.apply {
                     itemHomeTeamFouls.text = currentItem.homeTeamFouls
-                    itemHomeTeamFouls.text = currentItem.homeTeamFouls
+                    itemAwayTeamFouls.text = currentItem.awayTeamFouls
                 }
             }
-            is RedCardsViewHolder-> {
+
+            is RedCardsViewHolder -> {
                 holder.binding.apply {
                     itemHomeTeamRedCards.text = currentItem.homeTeamRedCards
                     itemAwayTeamRedCards.text = currentItem.awayTeamRedCards
                 }
             }
-            is YellowCardsViewHolder-> {
+
+            is YellowCardsViewHolder -> {
                 holder.binding.apply {
                     itemHomeTeamYellowCards.text = currentItem.homeTeamYellowCards
                     itemAwayTeamYellowCards.text = currentItem.awayTeamYellowCards
                 }
             }
-            is ShotsViewHolder-> {
+
+            is ShotsViewHolder -> {
                 holder.binding.apply {
                     itemHomeTeamShots.text = currentItem.homeTeamShots
                     itemAwayTeamShots.text = currentItem.awayTeamShots
                 }
             }
-            is HalfTimeGoalsViewHolder-> {
+
+            is HalfTimeGoalsViewHolder -> {
                 holder.binding.apply {
                     itemHomeTeamHalfTimeGoals.text = currentItem.homeTeamHalfTimeGoals
                     itemAwayTeamHalfTimeGoals.text = currentItem.awayTeamHalfTimeGoals
@@ -121,35 +127,34 @@ class InnerAdapter(private var list : List<Match>) :
         }
     }
 
-
     override fun getItemViewType(position : Int) : Int {
         when (position) {
             0 -> {
-                ITEM_FOULS
+                return ITEM_FOULS
             }
 
             1 -> {
-                ITEM_CORNERS
+                return ITEM_CORNERS
             }
 
             2 -> {
-                ITEM_RED_CARDS
+                return ITEM_YELLOW_CARDS
             }
 
             3 -> {
-              ITEM_YELLOW_CARDS
+                return ITEM_RED_CARDS
             }
 
             4 -> {
-               ITEM_SHOTS
+                return ITEM_SHOTS
             }
 
             5 -> {
-               ITEM_HALF_TIME_GOALS
+                return ITEM_HALF_TIME_GOALS
             }
 
+            else -> return 0
         }
-        return  ITEM_FOULS
     }
 
     abstract class BaseViewHolder(viewItem : View) : RecyclerView.ViewHolder(viewItem)

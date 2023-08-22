@@ -12,7 +12,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/light_gray_color">
+        android:background="@drawable/background">
 
 
         <TextView
@@ -22,8 +22,8 @@
             android:layout_marginTop="@dimen/margin16"
             android:gravity="center"
             android:text="@string/fouls"
-            android:textColor="@color/primary_color"
-            android:textSize="@dimen/textSize18"
+            android:textColor="@color/white"
+            android:textSize="16sp"
             app:layout_constraintEnd_toStartOf="@+id/item_home_team_fouls"
             app:layout_constraintStart_toEndOf="@+id/item_away_team_fouls"
             app:layout_constraintTop_toTopOf="parent" />
@@ -35,7 +35,8 @@
             android:layout_marginTop="40dp"
             android:layout_marginEnd="40dp"
             android:gravity="center"
-            android:textColor="@color/primary_color"
+            android:textColor="@color/white"
+            android:textSize="16sp"
             app:layout_constraintBottom_toTopOf="@+id/item_fouls_home_text"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -45,15 +46,16 @@
 
         <TextView
             android:id="@+id/item_fouls_home_text"
-            android:layout_width="wrap_content"
+            android:layout_width="50dp"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="24dp"
-            android:layout_marginBottom="@dimen/margin8"
+            android:layout_marginBottom="20dp"
             android:gravity="center"
             android:text="@string/home"
-            android:textColor="@color/primary_color"
+            android:textColor="@color/dark_gray_color"
+            android:textSize="8sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+            app:layout_constraintEnd_toEndOf="@+id/item_home_team_fouls"
+            app:layout_constraintStart_toStartOf="@+id/item_home_team_fouls" />
 
         <TextView
             android:id="@+id/item_away_team_fouls"
@@ -62,7 +64,8 @@
             android:layout_marginStart="40dp"
             android:layout_marginTop="40dp"
             android:gravity="center"
-            android:textColor="@color/primary_color"
+            android:textColor="@color/white"
+            android:textSize="16sp"
             app:layout_constraintBottom_toTopOf="@+id/item_fouls_away_text"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -70,15 +73,26 @@
 
         <TextView
             android:id="@+id/item_fouls_away_text"
-            android:layout_width="wrap_content"
+            android:layout_width="50dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="28dp"
-            android:layout_marginBottom="@dimen/margin8"
+            android:layout_marginBottom="20dp"
             android:gravity="center"
             android:text="@string/away"
-            android:textColor="@color/primary_color"
+            android:textColor="@color/dark_gray_color"
+            android:textSize="8sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintEnd_toEndOf="@+id/item_away_team_fouls"
+            app:layout_constraintStart_toStartOf="@+id/item_away_team_fouls" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="33dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/item_home_team_fouls"
+            app:layout_constraintStart_toEndOf="@+id/item_away_team_fouls"
+            app:srcCompat="@drawable/ic_fouls" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </com.google.android.material.card.MaterialCardView>

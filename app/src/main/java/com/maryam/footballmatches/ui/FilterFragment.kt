@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.maryam.footballmatches.data.DataManager
 import com.maryam.footballmatches.databinding.FragmentFilterBinding
 

@@ -11,7 +11,7 @@ import com.maryam.footballmatches.data.DataManager
 import com.maryam.footballmatches.data.domain.Match
 import com.maryam.footballmatches.databinding.ItemOuterMatchBinding
 
-class OuterAdapter(private var list : List<Match>)  :
+class OuterAdapter(private var list : List<Match>) :
     RecyclerView.Adapter<OuterAdapter.OuterViewHolder>() {
 
 
@@ -24,17 +24,23 @@ class OuterAdapter(private var list : List<Match>)  :
         return OuterViewHolder(view)
     }
 
-    override fun getItemCount() =list.size
+    override fun getItemCount() = list.size
     override fun onBindViewHolder(holder : OuterViewHolder, position : Int) {
-        val current = list[position]
+        val current = list[position + 1]
         val innerAdapter = InnerAdapter(DataManager.matches)
         holder.binding.apply {
             itemHomeTeamName.text = current.homeTeamName
             itemAwayTeamName.text = current.awayTeamName
-            innerRecyclerView.adapter=innerAdapter
+            innerRecyclerView.layoutManager = LinearLayoutManager(
+                innerRecyclerView.context,
+                LinearLayoutManager.HORIZONTAL,
+                false
+            )
+            innerRecyclerView.adapter = innerAdapter
         }
 
     }
+
 
 //    override fun setItems(newItems : List<Match>) {
 //        val diffUtil = DiffUtil.calculateDiff(MatchDiffUtil(list, newItems))

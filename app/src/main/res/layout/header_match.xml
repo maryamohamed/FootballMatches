@@ -17,17 +17,16 @@
 
         <TextView
             android:id="@+id/details_referee_name"
-            android:layout_width="150dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
-            android:gravity="center"
+            android:gravity="center|start|center_vertical"
             android:textColor="@color/primary_color"
             android:textSize="@dimen/textSize18"
-            app:layout_constraintEnd_toStartOf="@+id/details_home_team_name"
-            app:layout_constraintStart_toEndOf="@+id/details_away_team_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="K-Friend"
-            app:drawableStartCompat="@drawable/ic_referee" />
+            tools:text="K-Friend" />
 
 
         <TextView
@@ -88,8 +87,8 @@
 
         <ImageView
             android:id="@+id/delete_icon"
-            android:layout_width="16dp"
-            android:layout_height="16dp"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
             android:layout_marginTop="@dimen/margin4"
             android:layout_marginEnd="@dimen/margin8"
             android:layout_marginBottom="@dimen/margin8"
@@ -111,5 +110,15 @@
             app:layout_constraintTop_toTopOf="@+id/details_home_full_time_goals"
             app:layout_constraintVertical_bias="0.0"
             app:srcCompat="@drawable/ic_separator" />
+
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="4dp"
+            app:layout_constraintBottom_toBottomOf="@+id/details_referee_name"
+            app:layout_constraintEnd_toStartOf="@+id/details_referee_name"
+            app:layout_constraintTop_toTopOf="@+id/details_referee_name"
+            app:srcCompat="@drawable/referee" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </com.google.android.material.card.MaterialCardView>

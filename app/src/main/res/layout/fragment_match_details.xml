@@ -65,7 +65,7 @@
                     app:layout_constraintHorizontal_bias="0.452"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    tools:text="K-Friend" />
+                    android:text="K-Friend" />
 
                 <TextView
                     android:id="@+id/details_match_date"
@@ -78,7 +78,7 @@
                     app:layout_constraintHorizontal_bias="0.424"
                     app:layout_constraintStart_toStartOf="@+id/details_referee_name"
                     app:layout_constraintTop_toBottomOf="@+id/details_referee_name"
-                    tools:text="15/07/2014" />
+                    android:text="15/07/2014" />
 
                 <ImageView
                     android:id="@+id/details_away_team_logo"
@@ -100,7 +100,7 @@
                     app:layout_constraintEnd_toEndOf="@+id/details_away_team_logo"
                     app:layout_constraintStart_toStartOf="@+id/details_away_team_logo"
                     app:layout_constraintTop_toBottomOf="@+id/details_away_team_logo"
-                    tools:text="Wolvs" />
+                    android:text="Wolvs" />
 
                 <TextView
                     android:id="@+id/details_away_text"
@@ -131,7 +131,7 @@
                     app:layout_constraintEnd_toEndOf="@+id/details_home_team_logo"
                     app:layout_constraintStart_toStartOf="@+id/details_home_team_logo"
                     app:layout_constraintTop_toBottomOf="@+id/details_home_team_logo"
-                    tools:text="liverpool" />
+                    android:text="liverpool" />
 
                 <TextView
                     android:id="@+id/details_home_text"
@@ -150,7 +150,7 @@
                     android:layout_height="wrap_content"
                     app:layout_constraintBottom_toBottomOf="@+id/details_separator"
                     app:layout_constraintStart_toStartOf="@+id/details_match_date"
-                    tools:text="2" />
+                    android:text="2" />
 
                 <TextView
                     android:id="@+id/details_separator"
@@ -171,7 +171,7 @@
                     android:layout_height="wrap_content"
                     app:layout_constraintBottom_toBottomOf="@+id/details_separator"
                     app:layout_constraintEnd_toEndOf="@+id/details_match_date"
-                    tools:text="4" />
+                    android:text="4" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </com.google.android.material.card.MaterialCardView>
